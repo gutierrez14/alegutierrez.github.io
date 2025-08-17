@@ -1,0 +1,28 @@
+.quick-links{
+    display: flex;
+    /* displays links side by side */
+    gap: 12px; 
+    /* gap between links */
+    margin-top: 10px;
+    /* vertical gap between image and links */
+}
+
+/* making all links look cleaner */
+.quick-links a{
+    padding: 10px 16px;
+    /* makes the clickable boxes */
+    text-decoration: none;
+    /* remove link underline */
+    background-color: #0366d6;
+    /* link bckgrnd color: blue */
+    color: white;
+    /* link txt color: white */
+    border-radius: 6px
+    /* slightly roundez corners */
+
+}
+
+/* add hover effect, makes it more clickable*/
+.quick-links a:hover{
+    background-color: #024a9b;
+}

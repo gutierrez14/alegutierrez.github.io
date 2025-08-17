@@ -1,0 +1,41 @@
+<!-- structure + content -->
+
+<!-- tells the browser "this file is HTML5" -->
+<!doctype html> 
+
+<!-- 'html' : root element, all code lives inside <html> -->
+<!-- lang="en" : lang. the website is coded in, for browser and screen readers -->
+<html lang="en">
+
+<!-- 'head' : contains info. ab. the page, not shown on website -->
+<head>
+    <!-- come back to this, idk what this means lol -->
+    <meta charset="utf-8">
+    <!-- project/ tab tile, not shown on website -->
+    <title> My Personal Website </title>
+    <!-- tells browser to load /css/styles.css relative to this html file -->
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<!-- 'body': visible content of the website, user sees this -->
+<body>
+    <!-- 'h1' : the biggest heading, used for the tile shown on the website -->
+    <h1> Hello, World! </h1>
+    <img src="images/me.jpg" alt="photo of me" width="200">
+      <!-- <img> displays an image
+       src = path to the image file
+       alt = alternative text (screen readers, also shows if the image fails to load)
+       width = makes the image 200px wide (optional, you can adjust or remove) -->
+
+       <!-- container to group links 
+            I name the 'class' so I can refernce it in .css using the name '.quick-links' 
+       -->
+    <div class="quick-links"> 
+        <a href="https://github.com/gutierrez14" target="_blank">My Github </a>
+        <a href="https://www.linkedin.com/in/alejandra-gutierrez-216926363/" target="_blank"> My LinkedIn</a>
+    </div>
+</body>
+
+</html>
