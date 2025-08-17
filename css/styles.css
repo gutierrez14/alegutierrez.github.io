@@ -2,9 +2,9 @@
 
     display: flex;
     /* displays links side by side */
-    gap: 12px; 
+    gap: 50px; 
     /* gap between links */
-    margin-top: 10px;
+    margin-top: 30px;
     /* vertical gap between image and links */
 }
 
@@ -32,14 +32,15 @@
 img {
     border-radius: 50%; 
     /*  rounds corners, shapes it into a circle*/
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     /* set dimensions */
     object-fit: cover;
     /* zoom/crop to fit size w/o squishing */
 }
 
 body {
+    
     background: linear-gradient(135deg, #ffffff00, #c5b251a6);
     /* margin: 0; */
     text-align: center;
@@ -56,4 +57,24 @@ body {
     /* center of the page */
     align-items: center;
     /* aligns non-txt, aka the png and links */
+}
+
+h1 {
+    font-size: 46px; /* makes the header big */
+}
+
+h3{
+    font-size: 35px;
+}
+
+p{
+    font-size: 30px;
+}
+
+.quick-links a {
+    font-size: 20px; /* link buttons */
+}
+
+li{
+    font-size: 30px;
 }
