@@ -9,6 +9,8 @@
 
 <!-- 'head' : contains info. ab. the page, not shown on website -->
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
     <!-- makes layout scale correctly on phones -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- come back to this, idk what this means lol -->
@@ -23,6 +25,16 @@
 
 <!-- 'body': visible content of the website, user sees this -->
 <body>
+    <!-- addingg a hamburger button -->
+     <button id="menuButton" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
+        <!-- 3 lines to make it a 'hamburger' button -->
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>
+     </button>
+     <!-- adding a semi-transparent backdrop -->
+      <div id="backdrop" class="backdrop" hidden></div>
+      
     <!-- 'h1' : the biggest heading, used for the tile shown on the website -->
     <h1> Hello, World! </h1>
     <img src="images/me.jpg" alt="photo of me" >
