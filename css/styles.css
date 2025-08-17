@@ -1,4 +1,5 @@
 .quick-links{
+
     display: flex;
     /* displays links side by side */
     gap: 12px; 
@@ -9,11 +10,12 @@
 
 /* making all links look cleaner */
 .quick-links a{
+
     padding: 10px 16px;
     /* makes the clickable boxes */
     text-decoration: none;
     /* remove link underline */
-    background-color: #0366d6;
+    background-color: #b3b288b9;
     /* link bckgrnd color: blue */
     color: white;
     /* link txt color: white */
@@ -24,5 +26,34 @@
 
 /* add hover effect, makes it more clickable*/
 .quick-links a:hover{
-    background-color: #024a9b;
+    background-color: #c6c5a4b9;
+}
+
+img {
+    border-radius: 50%; 
+    /*  rounds corners, shapes it into a circle*/
+    width: 200px;
+    height: 200px;
+    /* set dimensions */
+    object-fit: cover;
+    /* zoom/crop to fit size w/o squishing */
+}
+
+body {
+    background: linear-gradient(135deg, #ffffff00, #c5b251a6);
+    /* margin: 0; */
+    text-align: center;
+    /* aligns txt/ headings, not <p> */
+
+    min-height: 100vh;
+    /* take up full screen height */
+
+    display: flex;
+    /* aligns all items (horizontally) */
+    flex-direction: column;
+    /* chnages direction of alignment to vertical */
+    justify-content: center;
+    /* center of the page */
+    align-items: center;
+    /* aligns non-txt, aka the png and links */
 }

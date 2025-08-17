@@ -23,7 +23,7 @@
 <body>
     <!-- 'h1' : the biggest heading, used for the tile shown on the website -->
     <h1> Hello, World! </h1>
-    <img src="images/me.jpg" alt="photo of me" width="200">
+    <img src="images/me.jpg" alt="photo of me" >
       <!-- <img> displays an image
        src = path to the image file
        alt = alternative text (screen readers, also shows if the image fails to load)
@@ -35,20 +35,27 @@
     <div class="quick-links"> 
         <a href="https://github.com/gutierrez14" target="_blank">My GitHub </a>
         <a href="https://www.linkedin.com/in/alejandra-gutierrez-216926363/" target="_blank"> My LinkedIn</a>
+        <a href="mailto:alejandra.chavezgut@gmail.com" target="_blank">Email</a>
     </div>
 
-    <div class="description">
-        <p>
-            Hello, My name is Alejandra Gutierrez but I go by Ale. I am a first-gen recent UAB grad with a B.S. in CS and minor in mathematics.
-            I enjoy learning new hobbies. 
-        </p>
-        <p>
-            Fun Facts: <br><br>
-            - I did taekwondo for 3 years <br> 
-            - <br>
-            -
-        </p>
-    </div>
+    <!-- container w/ relevant info. 
+        reference in .css using '.about-me'-->
+    <section class="about-me">
+        <h3>About Me</h3>
+        Hello, My name is Alejandra Gutierrez but I go by Ale. I am a first-gen recent UAB grad with a B.S. in CS and minor in mathematics.
+        I enjoy learning new hobbies. 
+    </section>
+    <!-- container w/ relevant info. 
+        reference in .css using '.fun-facts'-->
+    <section class="fun-facts">
+        <h3>Fun Facts:</h3> 
+        <!-- bullet pts. -->
+        <ul>
+            <li>I did taekwondo for 3 years </li> 
+            <li> </li>
+            <li> </li>
+        </ul>
+    </section>
 </body>
 
 </html>
