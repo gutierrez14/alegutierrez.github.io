@@ -22,6 +22,7 @@
 
 
 </head>
+<script src="js/main.js"></script>
 
 <!-- 'body': visible content of the website, user sees this -->
 <body>
@@ -34,6 +35,18 @@
      </button>
      <!-- adding a semi-transparent backdrop -->
       <div id="backdrop" class="backdrop" hidden></div>
+      <nav id="sidebar" class="sidebar" aria-hidden="true">
+        <button id="closeButton" class="close" aria-label="Close menu">x</button>
+
+
+        <ul class="menu">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <!-- <li><a href="resume.pdf">Resume</a></li> -->
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
       
     <!-- 'h1' : the biggest heading, used for the tile shown on the website -->
     <h1> Hello, World! </h1>

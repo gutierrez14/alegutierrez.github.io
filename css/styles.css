@@ -1,26 +1,20 @@
+/* ---------- Q U I C K  L I N K S ---------- */
+
 .quick-links{
 
-    display: flex;
-    /* displays links side by side */
-    gap: 50px; 
-    /* gap between links */
-    margin-top: 30px;
-    /* vertical gap between image and links */
+    display: flex;/* displays links side by side */
+    gap: 50px; /* gap between links */
+    margin-top: 30px; /* vertical gap between image and links */
 }
 
 /* making all links look cleaner */
 .quick-links a{
 
-    padding: 10px 16px;
-    /* makes the clickable boxes */
-    text-decoration: none;
-    /* remove link underline */
-    background-color: #b3b288b9;
-    /* link bckgrnd color: blue */
-    color: white;
-    /* link txt color: white */
-    border-radius: 6px
-    /* slightly roundez corners */
+    padding: 10px 16px;/* makes the clickable boxes */
+    text-decoration: none;/* remove link underline */
+    background-color: #b3b288b9;/* link bckgrnd color: blue */
+    color: white;/* link txt color: white */
+    border-radius: 6px; /* slightly roundez corners */
 
 }
 
@@ -28,54 +22,109 @@
 .quick-links a:hover{
     background-color: #c6c5a4b9;
 }
-
+/* ---------- I M A G E ---------- */
 img {
-    border-radius: 50%; 
-    /*  rounds corners, shapes it into a circle*/
+    border-radius: 50%; /*  rounds corners, shapes it into a circle*/
     width: 300px;
-    height: 300px;
-    /* set dimensions */
-    object-fit: cover;
-    /* zoom/crop to fit size w/o squishing */
+    height: 300px; /* set dimensions */
+    object-fit: cover; /* zoom/crop to fit size w/o squishing */
 }
-
+/* ---------- P A G E  B A S E ---------- */
 body {
     
     font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(135deg, #ffffff00, #c5b251a6);
-    /* margin: 0; */
-    text-align: center;
-    /* aligns txt/ headings, not <p> */
+    background: linear-gradient(135deg, #ffffff00, #c5b251a6);/* margin: 0; */
+    text-align: center; /* aligns txt/ headings, not <p> */
 
-    min-height: 100vh;
-    /* take up full screen height */
+    min-height: 100vh; /* take up full screen height */
+    display: flex; /* aligns all items (horizontally) */
+    flex-direction: column; /* chnages direction of alignment to vertical */
+    justify-content: center; /* vertical center: center of the page */
+    align-items: center; /* horizontal center: aligns non-txt, aka the png and links */
+}
 
-    display: flex;
-    /* aligns all items (horizontally) */
-    flex-direction: column;
-    /* chnages direction of alignment to vertical */
-    justify-content: center;
-    /* center of the page */
+h1{ font-size: 46px; } /* makes the header big */
+h3{ font-size: 35px; } 
+p { font-size: 30px; }
+li{ font-size: 30px; }
+/* ---------- H A  M B U R G E R ---------- */
+.hamburger{
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
     align-items: center;
-    /* aligns non-txt, aka the png and links */
+    justify-content: center;
+    background: white;
+    border:1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1001; /* above backdrop and content */
 }
 
-h1 {
-    font-size: 46px; /* makes the header big */
+.hamburger .bar{
+    display: block;
+    width: 20px;
+    height:2px;
+    background-color: #333;
+    margin: 3px 0;
+}
+/* ---------- B A C K D R O P (DIM THE PAGE) ---------- */
+.backdrop{
+    position: fixed;
+    inset: 0; /* top/right/bottom/left: 0 */
+    background: #fff;
+    z-index: 1002;
+    display:none;
 }
 
-h3{
-    font-size: 35px;
+.backdrop .show{
+    display: block;
+}
+/* ---------- S I D E B A R (SLIDE IN PANEL) ---------- */
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -8px 0 24px rgba(0,0,0,0.12);
+    transform: translateX(100%);
+    transition: transform .25s ease;
+    z-index: 1002;
+    padding: 16px;
+}
+/* toggled by JS */
+.sidebar .open{
+    transform: translateX(0%); /* slide into view */
 }
 
-p{
-    font-size: 30px;
+.sidebar .close{
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    line-height:1;
+    cursor: pointer;
+    margin-left: auto;
+    display: block;
 }
 
-.quick-links a {
-    font-size: 20px; /* link buttons */
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
 }
 
-li{
-    font-size: 30px;
+.menu li{ margin: 12px 0; }
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
 }
+
+.menu a:hover {text-decoration: underline; }
+
