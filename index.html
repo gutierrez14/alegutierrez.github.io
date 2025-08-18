@@ -9,31 +9,37 @@
 
 <!-- 'head' : contains info. ab. the page, not shown on website -->
 <head>
+    <!-- link to Google fonts,  loads 'Quicksand' Google servers-->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- makes layout scale correctly on phones -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- come back to this, idk what this means lol -->
+    <!-- char. encoding : tells browser how to read txt (UTF-8 suppprts all chars. and emojis) -->
     <meta charset="utf-8">
     <!-- project/ tab tile, not shown on website -->
     <title> My Personal Website </title>
     <!-- tells browser to load /css/styles.css relative to this html file -->
     <link rel="stylesheet" href="css/styles.css">
-
-
 </head>
 
 <!-- 'body': visible content of the website, user sees this -->
 <body>
-    <!-- addingg a hamburger button -->
+    <!--adding a hamburger button 
+        aria-label helps screen readers describe the button
+        aria-expanded / aria controls = accessibility helpers menus -->
      <button id="menuButton" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
-        <!-- 3 lines to make it a 'hamburger' button -->
+        <!-- 3 lines to make it a 'hamburger' button
+             each <span> = 1 bar in the ha,burger button-->
          <span class="bar"></span>
          <span class="bar"></span>
          <span class="bar"></span>
      </button>
-     <!-- adding a semi-transparent backdrop -->
+     <!-- backdrop: the dark transparent overlay behind the sidebar -->
+     <!-- hidden: invisble until JS shows it --> 
       <div id="backdrop" class="backdrop" hidden></div>
+      <!-- navigation sidebar : hidden menu with links -->
+       <!-- aria-hidden="true" : accessibility: tells screen readers its hidden when closed -->
+
       <nav id="sidebar" class="sidebar" aria-hidden="true">
         <button id="closeButton" class="close" aria-label="Close menu">x</button>
 
