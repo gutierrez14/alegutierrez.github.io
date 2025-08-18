@@ -91,7 +91,7 @@ li{ font-size: 30px; }
     right: 0;
     width: 280px;
     height: 100vh;
-    background: #fff;
+    background: #f8f7e1b9;
     box-shadow: -8px 0 24px rgba(0,0,0,0.12);
     transform: translateX(100%);
     transition: transform .25s ease;

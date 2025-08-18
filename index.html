@@ -24,9 +24,18 @@
 
 <!-- 'body': visible content of the website, user sees this -->
 <body>
-    <!--adding a hamburger button 
-        aria-label helps screen readers describe the button
-        aria-expanded / aria controls = accessibility helpers menus -->
+    <!-- adding a hamburger button -->
+
+    <!-- aria-attributes are for accessibility (screen readers) -->
+        <!-- aria- label : text label-->
+        <!-- aria-expanded : describes opens or closed -->
+        <!-- aria-controls : describes what it control -->
+    <!-- id vs class -->
+        <!-- id : uniquely identifies 1 single element on the page -->
+        <!-- Used to target something specific (ex. linking to a section/ .css) -->
+        <!-- class : groups elements together under the same "style name" -->
+        <!-- Used for applying the same css rules to multiple items (ex. CSS => .highlight {background: yellow;}) -->
+
      <button id="menuButton" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
         <!-- 3 lines to make it a 'hamburger' button
              each <span> = 1 bar in the ha,burger button-->
@@ -37,14 +46,18 @@
      <!-- backdrop: the dark transparent overlay behind the sidebar -->
      <!-- hidden: invisble until JS shows it --> 
       <div id="backdrop" class="backdrop" hidden></div>
-      <!-- navigation sidebar : hidden menu with links -->
-       <!-- aria-hidden="true" : accessibility: tells screen readers its hidden when closed -->
 
+      <!-- navigation sidebar -->
+       <!-- the part of the website that helps you move around to diff. sections and pages -->
+       <!-- aria-hidden="true" : accessibility: tells screen readers its hidden when closed -->
       <nav id="sidebar" class="sidebar" aria-hidden="true">
+        <!-- close button inside sidebar  -->
+        <!-- single action : close, does not toggle anything -->
         <button id="closeButton" class="close" aria-label="Close menu">x</button>
 
-
+        <!-- unordered list <ul> of navigation links -->
         <ul class="menu">
+            <!-- links jump to their respective sections -->
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
             <!-- <li><a href="resume.pdf">Resume</a></li> -->
@@ -53,10 +66,11 @@
       </nav>
 
       
-    <!-- 'h1' : the biggest heading, used for the tile shown on the website -->
+    <!-- 'h1' : main heading, used for the title shown on the website -->
     <h1> Hello, World! </h1>
+
     <img src="images/me.jpg" alt="photo of me" >
-      <!-- <img> displays an image
+      <!-- <img> displays an image of me
        src = path to the image file
        alt = alternative text (screen readers, also shows if the image fails to load)
        width = makes the image 200px wide (optional, you can adjust or remove) -->
@@ -72,7 +86,7 @@
 
     <!-- container w/ relevant info. 
         reference in .css using '.about-me'-->
-    <section class="about-me">
+    <section  id="about" class="about-me">
         <h3>About Me</h3>
         <p>
         My name is Alejandra Gutierrez, but most people just call me Ale. I’m a first-generation college graduate from the University of Alabama at Birmingham,
@@ -81,20 +95,21 @@
         whether it’s trying out creative projects, training in martial arts, or exploring new ways to stay active and curious. 
         I see myself as someone who is always learning—whether that’s diving into new tools in tech, taking on creative side projects, 
         or just trying something I’ve never done before.
- 
         </p>
     </section>
+
     <!-- container w/ relevant info. 
         reference in .css using '.fun-facts'-->
     <section class="fun-facts">
         <h3>Fun Facts:</h3> 
-        <!-- bullet pts. -->
+        <!-- unordered list : bullet pts. -->
         <ul>
             <li>I did taekwondo for 3 years </li> 
             <li> </li>
             <li> </li>
         </ul>
     </section>
+
 <script src="js/main.js"></script>
 </body>
 </html>
